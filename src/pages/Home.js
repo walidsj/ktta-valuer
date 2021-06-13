@@ -41,7 +41,7 @@ function App() {
 
 	return (
 		<div className="background-sircuit d-flex flex-column min-vh-100 justify-content-center align-items-center">
-			{!data ? (
+			{!count ? (
 				<span className="text-center">
 					<img
 						src={logo}
