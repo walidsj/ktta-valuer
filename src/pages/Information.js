@@ -109,7 +109,7 @@ function Information() {
 								</Link>
 								<h2 className="mb-0 fw-bold">Info Pengumpulan</h2>
 							</div>
-							<div className="mb-4 col-12 col-md-10 col-lg-8">
+							<div className="mb-4 mx-auto col-12 col-md-10 col-lg-8">
 								<form onSubmit={handleSearch}>
 									<div className="input-group mb-3">
 										<input
