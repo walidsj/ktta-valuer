@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useRecoilState } from "recoil";
 import swal from "sweetalert";
 import Tabletop from "tabletop";
 import logo from "../assets/logo.png";
+import { mahasiswaState } from "../stores/index.js";
 
-function Informasi() {
-	const [data, setData] = useState();
+function Information() {
+	const [data, setData] = useRecoilState(mahasiswaState);
 	const [mahasiswaData, setMahasiswaData] = useState();
 
 	useEffect(() => {
@@ -17,7 +19,7 @@ function Informasi() {
 				setData(res);
 			})
 			.catch((err) => console.warn(err));
-	}, []);
+	}, [setData]);
 
 	const [inputs, setInputs] = useState({});
 
@@ -114,7 +116,7 @@ function Informasi() {
 											}}
 										/>
 										<button className="btn btn-warning" type="submit">
-											Cari
+											<i className="fa fa-search me-2"></i>Cari
 										</button>
 									</div>
 								</form>
@@ -291,7 +293,8 @@ function Informasi() {
 								rel="noreferrer"
 								className="btn btn-warning"
 							>
-								Konfirmasi Pengumpulan
+								<i className="fa fa-check-circle me-2"></i>Konfirmasi
+								Pengumpulan
 							</a>
 						</div>
 						<div className="pt-3 text-center">
@@ -304,4 +307,4 @@ function Informasi() {
 	);
 }
 
-export default Informasi;
+export default Information;

@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useRecoilState } from "recoil";
 import Tabletop from "tabletop";
 import "../App.css";
 import logo from "../assets/logo.png";
+import { mahasiswaState, realtimeCount } from "../stores/index.js";
 
 function App() {
-	const [data, setData] = useState("");
-	const [count, setCount] = useState("");
+	const [data, setData] = useRecoilState(mahasiswaState);
+	const [count, setCount] = useRecoilState(realtimeCount);
 	const [indicatorShow, setIndicatorShow] = useState(false);
+	const [intervalNumber, setIntervalNumber] = useState(500);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -17,20 +20,22 @@ function App() {
 			})
 				.then((res) => {
 					const mahasiswa = res.filter((res) => res.prodi === "d3pbb");
+					setData(mahasiswa);
 					const sudah = mahasiswa.filter(
 						(mahasiswa) => mahasiswa.status_konfirmasi === "Sudah Konfirmasi"
 					).length;
-					const belum = mahasiswa.filter(
-						(mahasiswa) => mahasiswa.status_konfirmasi === "Belum Konfirmasi"
-					).length;
-					setData(mahasiswa);
-					setCount({ sudah: sudah, belum: belum, total: sudah + belum });
+					setCount({
+						sudah: sudah,
+						belum: mahasiswa.length - sudah,
+						total: mahasiswa.length,
+					});
 					setIndicatorShow((indicatorShow) => !indicatorShow);
 				})
 				.catch((err) => console.warn(err));
-		}, 15000);
+			setIntervalNumber(10000);
+		}, intervalNumber);
 		return () => clearInterval(interval);
-	}, []);
+	}, [setData, setCount, intervalNumber]);
 
 	const percentage = ((count.sudah / count.total) * 100).toFixed(2);
 
@@ -83,7 +88,7 @@ function App() {
 					</div>
 					<div className="pt-2">
 						<Link to="/informasi" className="btn btn-warning">
-							Info Pengumpulan
+							<i className="fa fa-paste me-2"></i>Info Pengumpulan
 						</Link>
 					</div>
 					<div className="pt-3">
@@ -94,7 +99,7 @@ function App() {
 								} fa fa-circle text-primary me-1`}
 								style={{ fontSize: "9px" }}
 							></i>
-							realtime (update/15s)
+							realtime (update/10s)
 						</small>
 						<br />
 						<small className="text-muted">© 2021 Ranger Valuer</small>
