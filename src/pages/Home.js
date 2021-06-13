@@ -6,25 +6,33 @@ import logo from "../assets/logo.png";
 
 function App() {
 	const [data, setData] = useState("");
+	const [count, setCount] = useState("");
 	const [indicatorShow, setIndicatorShow] = useState(false);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
 			Tabletop.init({
-				key: "https://docs.google.com/spreadsheets/d/100_QzUdfPibBXfA-YRtSlebevWlaFSpvnxI1JGWABOk/pubhtml",
+				key: "https://docs.google.com/spreadsheets/d/1m4xZDDiXprQTQLNsrlyyTBHZ5pdpsmsnUhpheGI8KPA/pubhtml",
 				simpleSheet: true,
 			})
 				.then((res) => {
-					const data = res[0];
-					setData(data);
+					const mahasiswa = res.filter((res) => res.prodi === "d3pbb");
+					const sudah = mahasiswa.filter(
+						(mahasiswa) => mahasiswa.status_konfirmasi === "Sudah Konfirmasi"
+					).length;
+					const belum = mahasiswa.filter(
+						(mahasiswa) => mahasiswa.status_konfirmasi === "Belum Konfirmasi"
+					).length;
+					setData(mahasiswa);
+					setCount({ sudah: sudah, belum: belum, total: sudah + belum });
 					setIndicatorShow((indicatorShow) => !indicatorShow);
 				})
 				.catch((err) => console.warn(err));
-		}, 2000);
+		}, 5000);
 		return () => clearInterval(interval);
 	}, []);
 
-	const percentage = ((data.sudah / data.total) * 100).toFixed(2);
+	const percentage = ((count.sudah / count.total) * 100).toFixed(2);
 
 	return (
 		<div className="background-sircuit d-flex flex-column min-vh-100 justify-content-center align-items-center">
@@ -54,11 +62,11 @@ function App() {
 					<div className="mb-3">
 						<h1 className="d-inline-flex fw-bold">
 							<div className="text-primary">
-								{data.sudah}
+								{count.sudah}
 								<i className="fa mx-2 fa-check-circle"></i>
 							</div>
 							<div className="text-warning">
-								{data.belum}
+								{count.belum}
 								<i className="fa mx-2 fa-times-circle"></i>
 							</div>
 						</h1>
