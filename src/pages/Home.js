@@ -28,7 +28,7 @@ function App() {
 					setIndicatorShow((indicatorShow) => !indicatorShow);
 				})
 				.catch((err) => console.warn(err));
-		}, 5000);
+		}, 7000);
 		return () => clearInterval(interval);
 	}, []);
 
