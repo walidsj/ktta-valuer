@@ -309,7 +309,7 @@ function Information() {
 						</div>
 						<div className="pt-3 text-center">
 							<small className="text-muted">
-								© 2021{" "}
+								© 2021
 								<a
 									href="https://www.instagram.com/ranger.valuer/"
 									target="_blank"

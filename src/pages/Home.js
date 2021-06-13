@@ -103,7 +103,7 @@ function App() {
 						</small>
 						<br />
 						<small className="text-muted">
-							© 2021{" "}
+							© 2021
 							<a
 								href="https://www.instagram.com/ranger.valuer/"
 								target="_blank"
