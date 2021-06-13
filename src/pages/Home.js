@@ -35,13 +35,13 @@ function App() {
 			setIntervalNumber(10000);
 		}, intervalNumber);
 		return () => clearInterval(interval);
-	}, [setData, setCount, intervalNumber]);
+	}, [setData, setCount, intervalNumber, data]);
 
 	const percentage = ((count.sudah / count.total) * 100).toFixed(2);
 
 	return (
 		<div className="background-sircuit d-flex flex-column min-vh-100 justify-content-center align-items-center">
-			{!count && !data ? (
+			{!data ? (
 				<span className="text-center">
 					<img
 						src={logo}

@@ -4,10 +4,11 @@ import { useRecoilState } from "recoil";
 import swal from "sweetalert";
 import Tabletop from "tabletop";
 import logo from "../assets/logo.png";
-import { mahasiswaState } from "../stores/index.js";
+import { mahasiswaState, realtimeCount } from "../stores/index.js";
 
 function Information() {
 	const [data, setData] = useRecoilState(mahasiswaState);
+	const [count, setCount] = useRecoilState(realtimeCount);
 	const [mahasiswaData, setMahasiswaData] = useState();
 
 	useEffect(() => {
@@ -16,10 +17,19 @@ function Information() {
 			simpleSheet: true,
 		})
 			.then((res) => {
+				const mahasiswa = res.filter((res) => res.prodi === "d3pbb");
 				setData(res);
+				const sudah = mahasiswa.filter(
+					(mahasiswa) => mahasiswa.status_konfirmasi === "Sudah Konfirmasi"
+				).length;
+				setCount({
+					sudah: sudah,
+					belum: mahasiswa.length - sudah,
+					total: mahasiswa.length,
+				});
 			})
 			.catch((err) => console.warn(err));
-	}, [setData]);
+	}, [setData, setCount, count]);
 
 	const [inputs, setInputs] = useState({});
 
