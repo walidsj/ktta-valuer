@@ -10289,5 +10289,6 @@ a.list-group-item-danger.active:hover {
 	background-image: url(./assets/background.png);
 	background-position: center center;
 	background-repeat: repeat;
+	background-attachment: fixed;
 	background-size: 60vh;
 }
