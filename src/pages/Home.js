@@ -109,7 +109,7 @@ function App() {
 								target="_blank"
 								rel="noreferrer"
 							>
-								<i className="fa fa-instagram me-2"></i>Ranger Valuer
+								<i className="fa fa-instagram ms-2 me-1"></i>Ranger Valuer
 							</a>
 						</small>
 					</div>
