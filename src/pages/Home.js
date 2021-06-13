@@ -102,7 +102,16 @@ function App() {
 							realtime (update/10s)
 						</small>
 						<br />
-						<small className="text-muted">© 2021 Ranger Valuer</small>
+						<small className="text-muted">
+							© 2021{" "}
+							<a
+								href="https://www.instagram.com/ranger.valuer/"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<i className="fa fa-instagram me-2"></i>Ranger Valuer
+							</a>
+						</small>
 					</div>
 				</div>
 			)}
