@@ -298,7 +298,7 @@ function Information() {
 						)}
 						<div className="text-center mb-4">
 							<a
-								href="http://bit.ly/PendataanPengumpulanKTTA"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSdc4UxbJJEVQHSIHKCk5iNvZflPPYnjKt1yjtFRrPODNGLF5A/viewform"
 								target="_blank"
 								rel="noreferrer"
 								className="btn btn-warning"
