@@ -28,7 +28,7 @@ function App() {
 					setIndicatorShow((indicatorShow) => !indicatorShow);
 				})
 				.catch((err) => console.warn(err));
-		}, 7000);
+		}, 15000);
 		return () => clearInterval(interval);
 	}, []);
 
@@ -94,7 +94,7 @@ function App() {
 								} fa fa-circle text-primary me-1`}
 								style={{ fontSize: "9px" }}
 							></i>
-							realtime data
+							realtime (update/15s)
 						</small>
 						<br />
 						<small className="text-muted">© 2021 Ranger Valuer</small>
