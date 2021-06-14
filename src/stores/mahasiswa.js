@@ -12,8 +12,8 @@ export const mahasiswaAtom = atom({
 
 export const mahasiswaSelector = selector({
 	key: "mahasiswaSelector",
-	get: async () => {
-		let mahasiswaData = {};
+	get: async ({ get }) => {
+		let mahasiswaData = get(mahasiswaAtom);
 		try {
 			let mahasiswa = await Tabletop.init({
 				key: "https://docs.google.com/spreadsheets/d/1m4xZDDiXprQTQLNsrlyyTBHZ5pdpsmsnUhpheGI8KPA/pubhtml",
