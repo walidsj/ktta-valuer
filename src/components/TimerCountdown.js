@@ -32,12 +32,12 @@ function TimerCountdown() {
 	return (
 		<div>
 			{!state ? (
-				<div>
+				<div className="fs-4 text-muted">
 					<i className="fa fa-spinner fa-spin me-2" />
 					Loading...
 				</div>
 			) : (
-				<div className="fw-bold text-primary">
+				<div className="fw-bold">
 					<span className="fs-4">{state.days}</span>h{" "}
 					<span className="fs-4">{state.hours}</span>j{" "}
 					<span className="fs-4">{state.minutes}</span>m{" "}
