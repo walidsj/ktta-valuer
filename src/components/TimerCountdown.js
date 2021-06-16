@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { todayAtom, counterAtom } from "../stores/counter.js"
 
@@ -8,7 +8,7 @@ function TimerCountdown() {
 
   useEffect(() => {
     setInterval(() => updateCountdown(), 1000);
-  }, []);
+  }, [setCountdownDate]);
 
   const updateCountdown = () => {
     if (countdownDate) {
