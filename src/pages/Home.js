@@ -5,6 +5,7 @@ import Tabletop from "tabletop";
 import "../App.css";
 import logo from "../assets/logo.png";
 import { mahasiswaState } from "../stores/mahasiswa.js";
+import TimerCountdown from "../components/TimerCountdown.js";
 
 function App() {
 	const [data, setData] = useRecoilState(mahasiswaState);
@@ -30,7 +31,7 @@ function App() {
 	return (
 		<div className="background-sircuit d-flex flex-column min-vh-100 justify-content-center align-items-center">
 			<div className="text-center px-3">
-				<div className="mb-4">
+				<div className="mb-3">
 					<img
 						src={logo}
 						className="pb-3"
@@ -39,16 +40,17 @@ function App() {
 					/>
 					<h2 className="mb-0 fw-bold">Live Count</h2>
 					<h4>Pengumpulan KTTA</h4>
+          <TimerCountdown />
 				</div>
 				<div className="mb-3">
 					<h1 className="d-inline-flex fw-bold">
 						<div className="text-primary">
 							{data.sudah}
-							<i className="fa mx-2 fa-check-circle"></i>
+							<i className="fa mx-2 fa-check-circle" />
 						</div>
 						<div className="text-warning">
 							{data.total - data.sudah}
-							<i className="fa mx-2 fa-times-circle"></i>
+							<i className="fa mx-2 fa-times-circle" />
 						</div>
 					</h1>
 				</div>
@@ -64,7 +66,7 @@ function App() {
 				</div>
 				<div className="pt-2">
 					<Link to="/informasi" className="btn btn-warning">
-						<i className="fa fa-paste me-2"></i>Info Pengumpulan
+						<i className="fa fa-paste me-2" />Info Pengumpulan
 					</Link>
 				</div>
 				<div className="pt-3">
@@ -74,7 +76,7 @@ function App() {
 								indicatorShow ? "fadeIn" : "fadeOut"
 							} fa fa-circle text-primary me-1`}
 							style={{ fontSize: "9px" }}
-						></i>
+						 />
 						realtime (update/10s)
 					</small>
 					<br />
@@ -85,7 +87,7 @@ function App() {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<i className="fa fa-instagram ms-2 me-1"></i>Ranger Valuer
+							<i className="fa fa-instagram ms-2 me-1" />Ranger Valuer
 						</a>
 					</small>
 				</div>

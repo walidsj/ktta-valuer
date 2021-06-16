@@ -92,7 +92,7 @@ function Information() {
 										}}
 									/>
 									<button className="btn btn-warning" type="submit">
-										<i className="fa fa-search me-2"></i>Cari
+										<i className="fa fa-search me-2" />Cari
 									</button>
 								</div>
 							</form>
@@ -102,7 +102,7 @@ function Information() {
 								className="alert alert-primary alert-dismissible fade show text-left"
 								role="alert"
 							>
-								<i className="fa fa-exclamation-triangle me-2"></i>Ada
+								<i className="fa fa-exclamation-triangle me-2" />Ada
 								Pertanyaan?{" "}
 								<strong>
 									<a
@@ -200,7 +200,7 @@ function Information() {
 														rel="noreferrer"
 														target="_blank"
 													>
-														<i className="fa fa-link"></i>
+														<i className="fa fa-link" />
 													</a>
 												</td>
 												<td>
@@ -208,7 +208,7 @@ function Information() {
 														className="btn btn-warning btn-sm"
 														onClick={() => handlePersetujuan()}
 													>
-														<i className="fa fa-copy"></i>
+														<i className="fa fa-copy" />
 													</button>
 												</td>
 											</tr>
@@ -226,7 +226,7 @@ function Information() {
 														rel="noreferrer"
 														target="_blank"
 													>
-														<i className="fa fa-link"></i>
+														<i className="fa fa-link" />
 													</a>
 												</td>
 												<td>
@@ -234,7 +234,7 @@ function Information() {
 														className="btn btn-warning btn-sm"
 														onClick={() => handleTurnitin()}
 													>
-														<i className="fa fa-copy"></i>
+														<i className="fa fa-copy" />
 													</button>
 												</td>
 											</tr>
@@ -252,7 +252,7 @@ function Information() {
 														rel="noreferrer"
 														target="_blank"
 													>
-														<i className="fa fa-link"></i>
+														<i className="fa fa-link" />
 													</a>
 												</td>
 												<td>
@@ -260,7 +260,7 @@ function Information() {
 														className="btn btn-warning btn-sm"
 														onClick={() => handleDosnil()}
 													>
-														<i className="fa fa-copy"></i>
+														<i className="fa fa-copy" />
 													</button>
 												</td>
 											</tr>
@@ -278,7 +278,7 @@ function Information() {
 														rel="noreferrer"
 														target="_blank"
 													>
-														<i className="fa fa-link"></i>
+														<i className="fa fa-link" />
 													</a>
 												</td>
 												<td>
@@ -286,7 +286,7 @@ function Information() {
 														className="btn btn-warning btn-sm"
 														onClick={() => handleDosnil()}
 													>
-														<i className="fa fa-copy"></i>
+														<i className="fa fa-copy" />
 													</button>
 												</td>
 											</tr>
@@ -303,7 +303,7 @@ function Information() {
 							rel="noreferrer"
 							className="btn btn-warning"
 						>
-							<i className="fa fa-check-circle me-2"></i>Konfirmasi Pengumpulan
+							<i className="fa fa-check-circle me-2" />Konfirmasi Pengumpulan
 						</a>
 					</div>
 					<div className="pt-3 text-center">
@@ -314,7 +314,7 @@ function Information() {
 								target="_blank"
 								rel="noreferrer"
 							>
-								<i className="fa fa-instagram ms-2 me-1"></i>Ranger Valuer
+								<i className="fa fa-instagram ms-2 me-1" />Ranger Valuer
 							</a>
 						</small>
 					</div>
