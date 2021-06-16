@@ -7,8 +7,9 @@ function TimerCountdown() {
 	const [state, setState] = useRecoilState(counterAtom);
 
 	useEffect(() => {
+		updateCountdown();
 		setInterval(() => updateCountdown(), 1000);
-	});
+	}, []);
 
 	const updateCountdown = () => {
 		if (countdownDate) {
@@ -30,20 +31,11 @@ function TimerCountdown() {
 	};
 
 	return (
-		<div>
-			{!state ? (
-				<div className="fs-4 text-muted">
-					<i className="fa fa-spinner fa-spin me-2" />
-					Loading...
-				</div>
-			) : (
-				<div className="fw-bold">
-					<span className="fs-4">{state.days}</span>h{" "}
-					<span className="fs-4">{state.hours}</span>j{" "}
-					<span className="fs-4">{state.minutes}</span>m{" "}
-					<span className="fs-4">{state.seconds}</span>s
-				</div>
-			)}
+		<div className="fw-bold">
+			<span className="fs-4">{state.days}</span>h{" "}
+			<span className="fs-4">{state.hours}</span>j{" "}
+			<span className="fs-4">{state.minutes}</span>m{" "}
+			<span className="fs-4">{state.seconds}</span>s
 		</div>
 	);
 }

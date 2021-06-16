@@ -7,5 +7,5 @@ export const counterAtom = atom({
 
 export const todayAtom = atom({
 	key: "todayAtom",
-	default: new Date('2021-06-18 09:00:00 GMT+0700').getTime(),
+	default: new Date("2021-06-18 09:00:00 GMT+0700").getTime(),
 });
