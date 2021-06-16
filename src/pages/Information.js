@@ -92,7 +92,8 @@ function Information() {
 										}}
 									/>
 									<button className="btn btn-warning" type="submit">
-										<i className="fa fa-search me-2" />Cari
+										<i className="fa fa-search me-2" />
+										Cari
 									</button>
 								</div>
 							</form>
@@ -102,8 +103,8 @@ function Information() {
 								className="alert alert-primary alert-dismissible fade show text-left"
 								role="alert"
 							>
-								<i className="fa fa-exclamation-triangle me-2" />Ada
-								Pertanyaan?{" "}
+								<i className="fa fa-exclamation-triangle me-2" />
+								Ada Pertanyaan?{" "}
 								<strong>
 									<a
 										className="text-light"
@@ -303,7 +304,8 @@ function Information() {
 							rel="noreferrer"
 							className="btn btn-warning"
 						>
-							<i className="fa fa-check-circle me-2" />Konfirmasi Pengumpulan
+							<i className="fa fa-check-circle me-2" />
+							Konfirmasi Pengumpulan
 						</a>
 					</div>
 					<div className="pt-3 text-center">
@@ -314,7 +316,8 @@ function Information() {
 								target="_blank"
 								rel="noreferrer"
 							>
-								<i className="fa fa-instagram ms-2 me-1" />Ranger Valuer
+								<i className="fa fa-instagram ms-2 me-1" />
+								Ranger Valuer
 							</a>
 						</small>
 					</div>
