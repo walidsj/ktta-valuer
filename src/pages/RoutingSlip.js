@@ -80,6 +80,7 @@ function RoutingSlip() {
           >
             <i className="fa fa-info me-2" />
             Pengumpulan Akhir
+            <i className="fa fa-spinner fa-spin ms-2" />
           </Link>
           <br />
           <Link
@@ -87,7 +88,7 @@ function RoutingSlip() {
             className="btn btn-outline btn-sm btn-secondary m-1"
           >
             <i className="fa fa-info me-2" />
-            Tahap Penilaian
+            Pengumpulan Penilaian
             <i className="fa fa-check-circle ms-2" />
           </Link>
         </div>
