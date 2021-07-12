@@ -17,5 +17,5 @@ export const counterRoutingSlipAtom = atom({
 
 export const todayRoutingSlipAtom = atom({
   key: "todayRoutingSlipAtom",
-  default: new Date("2021-07-16 09:00:00 GMT+0700").getTime(),
+  default: new Date("2021-07-16 17:00:00 GMT+0700").getTime(),
 });
