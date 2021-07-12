@@ -73,7 +73,7 @@ function Valuation() {
             className="btn btn-primary"
           >
             <i className="fa fa-paste me-2" />
-            Info Pengumpulan
+            Pengumpulan Penilaian
           </Link>
         </div>
         <div className="pt-3">
