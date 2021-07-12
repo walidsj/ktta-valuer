@@ -35,7 +35,7 @@ function RoutingSlip() {
       <div className="container px-3">
         <div className="row">
           <div className="col-12 text-center col-md-6">
-            <div className="mb-3 mt-5">
+            <div className="mb-3 mt-3">
               <img
                 src={logo}
                 className="pb-3"
@@ -61,15 +61,6 @@ function RoutingSlip() {
                   <i className="fa mx-2 fa-times-circle" />
                 </div>
               </h1>
-            </div>
-            <div className="progress">
-              <div
-                className="progress-bar progress-bar-striped progress-bar-animated"
-                role="progressbar"
-                style={{ width: `${percentage}%` }}
-              ></div>
-            </div>
-            <div className="pt-2">
               <h4>{percentage}%</h4>
             </div>
             <div className="pt-2">
@@ -97,8 +88,8 @@ function RoutingSlip() {
               </Link>
             </div>
           </div>
-          <div className="col-12 col-md-6 mt-5">
-            <div className="mb-3 text-center">
+          <div className="col-12 col-md-6">
+            <div className="mb-3 mt-4 text-center">
               <h4>
                 <strong>Tracking Kelas</strong>
               </h4>
@@ -645,7 +636,7 @@ function RoutingSlip() {
             </div>
           </div>
         </div>
-        <div className="pt-3 text-center mb-5">
+        <div className="pt-3 text-center mb-3">
           <small className="text-muted">
             <i
               className={`${
