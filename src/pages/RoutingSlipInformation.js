@@ -158,60 +158,58 @@ function RoutingSlipInformation() {
                   </tr>
                 </tbody>
               </table>
-              {!mahasiswaData.judul_ktta && (
-                <div>
-                  <strong>Format Pengumpulan</strong>
-                  <table className="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Jenis</th>
-                        <th>Qty (PDF)</th>
-                        <th>Link</th>
-                        <th>Nama</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">Pernyataan Lulus</th>
-                        <td>1 lembar</td>
-                        <td
-                          rowSpan="2"
-                          style={{ textAlign: "center", paddingTop: "35px" }}
+              <div>
+                <strong>Format Pengumpulan</strong>
+                <table className="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Jenis</th>
+                      <th>Qty (PDF)</th>
+                      <th>Link</th>
+                      <th>Nama</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Pernyataan Lulus</th>
+                      <td>1 lembar</td>
+                      <td
+                        rowSpan="2"
+                        style={{ textAlign: "center", paddingTop: "35px" }}
+                      >
+                        <a
+                          className="btn btn-primary btn-sm"
+                          href="http://gg.gg/persetujuandosnil"
+                          rel="noreferrer"
+                          target="_blank"
                         >
-                          <a
-                            className="btn btn-primary btn-sm"
-                            href="http://gg.gg/persetujuandosnil"
-                            rel="noreferrer"
-                            target="_blank"
-                          >
-                            <i className="fa fa-link" />
-                          </a>
-                        </td>
-                        <td>
-                          <button
-                            className="btn btn-warning btn-sm"
-                            onClick={() => handlePernyataanLulus()}
-                          >
-                            <i className="fa fa-copy" />
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Routing Slip</th>
-                        <td>1 berkas</td>
-                        <td>
-                          <button
-                            className="btn btn-warning btn-sm"
-                            onClick={() => handleRoutingSlip()}
-                          >
-                            <i className="fa fa-copy" />
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              )}
+                          <i className="fa fa-link" />
+                        </a>
+                      </td>
+                      <td>
+                        <button
+                          className="btn btn-warning btn-sm"
+                          onClick={() => handlePernyataanLulus()}
+                        >
+                          <i className="fa fa-copy" />
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Routing Slip</th>
+                      <td>1 berkas</td>
+                      <td>
+                        <button
+                          className="btn btn-warning btn-sm"
+                          onClick={() => handleRoutingSlip()}
+                        >
+                          <i className="fa fa-copy" />
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           )}
           <div className="text-center mb-4">

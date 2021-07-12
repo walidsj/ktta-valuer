@@ -186,123 +186,121 @@ function ValuationInformation() {
                   </tr>
                 </tbody>
               </table>
-              {!mahasiswaData.judul_ktta && (
-                <div>
-                  <strong>Format Pengumpulan</strong>
-                  <table className="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Jenis</th>
-                        <th>Qty (PDF)</th>
-                        <th>Link</th>
-                        <th>Nama</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">Lembar Persetujuan</th>
-                        <td>1 lembar</td>
-                        <td>
-                          <a
-                            className="btn btn-primary btn-sm"
-                            href="http://gg.gg/persetujuanKTTA21"
-                            rel="noreferrer"
-                            target="_blank"
-                          >
-                            <i className="fa fa-link" />
-                          </a>
-                        </td>
-                        <td>
-                          <button
-                            className="btn btn-warning btn-sm"
-                            onClick={() => handlePersetujuan()}
-                          >
-                            <i className="fa fa-copy" />
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Turnitin</th>
-                        <td>
-                          1 berkas
-                          <br />
-                          <span className="text-muted">Isi BAB I-IV</span>
-                        </td>
-                        <td>
-                          <a
-                            className="btn btn-primary btn-sm"
-                            href="https://perpustakaan.stan.ac.id/layanan-pindai-turnitin-ktta/"
-                            rel="noreferrer"
-                            target="_blank"
-                          >
-                            <i className="fa fa-link" />
-                          </a>
-                        </td>
-                        <td>
-                          <button
-                            className="btn btn-warning btn-sm"
-                            onClick={() => handleTurnitin()}
-                          >
-                            <i className="fa fa-copy" />
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Dosen Penilai I</th>
-                        <td>
-                          1 berkas
-                          <br />
-                          <span className="text-muted">Keseluruhan</span>
-                        </td>
-                        <td>
-                          <a
-                            className="btn btn-primary btn-sm"
-                            href={`http://${mahasiswaData.link_dosnil1}`}
-                            rel="noreferrer"
-                            target="_blank"
-                          >
-                            <i className="fa fa-link" />
-                          </a>
-                        </td>
-                        <td>
-                          <button
-                            className="btn btn-warning btn-sm"
-                            onClick={() => handleDosnil()}
-                          >
-                            <i className="fa fa-copy" />
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Dosen Penilai II</th>
-                        <td>
-                          1 berkas
-                          <br />
-                          <span className="text-muted">Keseluruhan</span>
-                        </td>
-                        <td>
-                          <a
-                            className="btn btn-primary btn-sm"
-                            href={`http://${mahasiswaData.link_dosnil2}`}
-                            rel="noreferrer"
-                            target="_blank"
-                          >
-                            <i className="fa fa-link" />
-                          </a>
-                        </td>
-                        <td>
-                          <button
-                            className="btn btn-warning btn-sm"
-                            onClick={() => handleDosnil()}
-                          >
-                            <i className="fa fa-copy" />
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              )}
+              <div>
+                <strong>Format Pengumpulan</strong>
+                <table className="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Jenis</th>
+                      <th>Qty (PDF)</th>
+                      <th>Link</th>
+                      <th>Nama</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Lembar Persetujuan</th>
+                      <td>1 lembar</td>
+                      <td>
+                        <a
+                          className="btn btn-primary btn-sm"
+                          href="http://gg.gg/persetujuanKTTA21"
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          <i className="fa fa-link" />
+                        </a>
+                      </td>
+                      <td>
+                        <button
+                          className="btn btn-warning btn-sm"
+                          onClick={() => handlePersetujuan()}
+                        >
+                          <i className="fa fa-copy" />
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Turnitin</th>
+                      <td>
+                        1 berkas
+                        <br />
+                        <span className="text-muted">Isi BAB I-IV</span>
+                      </td>
+                      <td>
+                        <a
+                          className="btn btn-primary btn-sm"
+                          href="https://perpustakaan.stan.ac.id/layanan-pindai-turnitin-ktta/"
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          <i className="fa fa-link" />
+                        </a>
+                      </td>
+                      <td>
+                        <button
+                          className="btn btn-warning btn-sm"
+                          onClick={() => handleTurnitin()}
+                        >
+                          <i className="fa fa-copy" />
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Dosen Penilai I</th>
+                      <td>
+                        1 berkas
+                        <br />
+                        <span className="text-muted">Keseluruhan</span>
+                      </td>
+                      <td>
+                        <a
+                          className="btn btn-primary btn-sm"
+                          href={`http://${mahasiswaData.link_dosnil1}`}
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          <i className="fa fa-link" />
+                        </a>
+                      </td>
+                      <td>
+                        <button
+                          className="btn btn-warning btn-sm"
+                          onClick={() => handleDosnil()}
+                        >
+                          <i className="fa fa-copy" />
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Dosen Penilai II</th>
+                      <td>
+                        1 berkas
+                        <br />
+                        <span className="text-muted">Keseluruhan</span>
+                      </td>
+                      <td>
+                        <a
+                          className="btn btn-primary btn-sm"
+                          href={`http://${mahasiswaData.link_dosnil2}`}
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          <i className="fa fa-link" />
+                        </a>
+                      </td>
+                      <td>
+                        <button
+                          className="btn btn-warning btn-sm"
+                          onClick={() => handleDosnil()}
+                        >
+                          <i className="fa fa-copy" />
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           )}
           <div className="text-center mb-4">
