@@ -35,7 +35,7 @@ function RoutingSlip() {
       <div className="container px-3">
         <div className="row">
           <div className="col-12 text-center col-md-6">
-            <div className="mb-3 mt-3">
+            <div className="mb-3 mt-4">
               <img
                 src={logo}
                 className="pb-3"
@@ -63,7 +63,7 @@ function RoutingSlip() {
               </h1>
               <h4>{percentage}%</h4>
             </div>
-            <div className="pt-2">
+            <div className="pt-2 pb-2 pb-md-1 mb-5 mb-md-1">
               <Link to="/informasi" className="btn btn-warning m-1">
                 <i className="fa fa-paste me-2 m-2" />
                 Pengumpulan RS & PL
