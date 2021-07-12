@@ -1,10 +1,14 @@
 import { useEffect } from "react";
 import { useRecoilState } from "recoil";
-import { todayAtom, counterAtom } from "../stores/counter.js";
+import {
+  todayRoutingSlipAtom,
+  counterRoutingSlipAtom,
+} from "../stores/counter.js";
 
-function TimerCountdown() {
-  const [countdownDate, setCountdownDate] = useRecoilState(todayAtom);
-  const [state, setState] = useRecoilState(counterAtom);
+function TimerCountdownRoutingSlip() {
+  const [countdownDate, setCountdownDate] =
+    useRecoilState(todayRoutingSlipAtom);
+  const [state, setState] = useRecoilState(counterRoutingSlipAtom);
 
   useEffect(() => {
     updateCountdown();
@@ -40,4 +44,4 @@ function TimerCountdown() {
   );
 }
 
-export default TimerCountdown;
+export default TimerCountdownRoutingSlip;
