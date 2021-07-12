@@ -164,19 +164,16 @@ function RoutingSlipInformation() {
                   <tr>
                     <th>No.</th>
                     <th>Nama Dosen</th>
-                    <th>Kode</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">Penilai I</th>
                     <td>{mahasiswaData.dosnil1}</td>
-                    <td>{mahasiswaData.kode_dosnil1}</td>
                   </tr>
                   <tr>
                     <th scope="row">Penilai II</th>
                     <td>{mahasiswaData.dosnil2}</td>
-                    <td>{mahasiswaData.kode_dosnil2}</td>
                   </tr>
                 </tbody>
               </table>
