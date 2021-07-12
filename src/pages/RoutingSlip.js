@@ -34,7 +34,7 @@ function RoutingSlip() {
     <div className="background-sircuit d-flex flex-column min-vh-100 justify-content-center align-items-center">
       <div className="container px-3">
         <div className="row">
-          <div className="col-12 text-center col-md-6">
+          <div className="col-12 text-center col-md-8">
             <div className="mb-3 mt-4">
               <img
                 src={logo}
@@ -88,7 +88,7 @@ function RoutingSlip() {
               </Link>
             </div>
           </div>
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-md-4">
             <div className="mb-3 mt-4 text-center">
               <h4>
                 <strong>Tracking Kelas</strong>
