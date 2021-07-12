@@ -176,7 +176,7 @@ function RoutingSlipInformation() {
                         <td>1 lembar</td>
                         <td
                           rowSpan="2"
-                          style={{ textAlign: "center", paddingTop: "25px" }}
+                          style={{ textAlign: "center", paddingTop: "35px" }}
                         >
                           <a
                             className="btn btn-primary btn-sm"
