@@ -579,7 +579,18 @@ function RoutingSlip() {
                                   <tr key={mahasiswa.no}>
                                     <td>{mahasiswa.no}</td>
                                     <td>{mahasiswa.nama}</td>
-                                    <td>{mahasiswa.status_konfirmasi}</td>
+                                    <td>
+                                      {mahasiswa.status_konfirmasi ==
+                                      "Belum Konfirmasi" ? (
+                                        <span className="badge bg-danger">
+                                          {mahasiswa.status_konfirmasi}
+                                        </span>
+                                      ) : (
+                                        <span className="badge bg-success">
+                                          {mahasiswa.status_konfirmasi}
+                                        </span>
+                                      )}
+                                    </td>
                                   </tr>
                                 ))}
                             </tbody>
