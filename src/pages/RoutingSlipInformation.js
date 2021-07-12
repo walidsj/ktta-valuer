@@ -102,7 +102,7 @@ function RoutingSlipInformation() {
                 <strong>
                   <a
                     className="text-light"
-                    href="https://www.instagram.com/p/CQE8BYihfwm"
+                    href="https://www.instagram.com/p/CRNrewlhXn-/"
                     target="_blank"
                     rel="noreferrer"
                   >
