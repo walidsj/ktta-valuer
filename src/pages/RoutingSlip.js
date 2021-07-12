@@ -79,7 +79,7 @@ function RoutingSlip() {
             className="btn btn-outline btn-sm btn-primary m-1 disabled"
           >
             <i className="fa fa-info me-2" />
-            Pengumpulan Akhir (Soon)
+            Pengumpulan Akhir
           </Link>
           <br />
           <Link
