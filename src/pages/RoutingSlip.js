@@ -44,6 +44,7 @@ function RoutingSlip() {
             <br /> & Pernyataan Lulus
           </h4>
           <TimerCountdownRoutingSlip />
+          <small>Batas: 16 Juli 2021 (17.00 WIB)</small>
         </div>
         <div className="mb-3">
           <h1 className="d-inline-flex fw-bold">
@@ -68,14 +69,14 @@ function RoutingSlip() {
           <h4>{percentage}%</h4>
         </div>
         <div className="pt-2">
-          <Link to="/informasi" className="btn btn-warning m-2">
+          <Link to="/informasi" className="btn btn-warning m-1">
             <i className="fa fa-paste me-2 m-2" />
-            Info Pengumpulan
+            Pengumpulan RS & PL
           </Link>
           <br />
           <Link
             to="/pengumpulan-akhir"
-            className="btn btn-outline btn-sm btn-primary m-2 disabled"
+            className="btn btn-outline btn-sm btn-primary m-1 disabled"
           >
             <i className="fa fa-info me-2" />
             Pengumpulan Akhir (Soon)
@@ -83,7 +84,7 @@ function RoutingSlip() {
           <br />
           <Link
             to="/pengumpulan-penilaian"
-            className="btn btn-outline btn-sm btn-secondary m-2"
+            className="btn btn-outline btn-sm btn-secondary m-1"
           >
             <i className="fa fa-info me-2" />
             Tahap Penilaian

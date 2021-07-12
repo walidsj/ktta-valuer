@@ -43,6 +43,7 @@ function Valuation() {
           <h2 className="mb-0 fw-bold">Hasil Live Count</h2>
           <h4>Pengumpulan KTTA untuk Dinilai</h4>
           <TimerCountdown />
+          <small>Batas: 18 Juni 2021 (09.00 WIB)</small>
         </div>
         <div className="mb-3">
           <h1 className="d-inline-flex fw-bold">
