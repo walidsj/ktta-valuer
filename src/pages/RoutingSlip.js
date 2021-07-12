@@ -558,43 +558,84 @@ function RoutingSlip() {
                     <>
                       {selectedClass !== "all" && (
                         <small>
-                          <table className="table table-striped">
-                            <thead>
-                              <tr>
-                                <th>No.</th>
-                                <th>Nama</th>
-                                <th>Status</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {data.data
-                                .filter((val) => {
-                                  if (val.kelas === selectedClass) {
-                                    return true;
-                                  } else {
-                                    return false;
-                                  }
-                                })
-                                .map((mahasiswa) => (
-                                  <tr key={mahasiswa.no}>
-                                    <td>{mahasiswa.no}</td>
-                                    <td>{mahasiswa.nama}</td>
-                                    <td>
-                                      {mahasiswa.status_konfirmasi ==
-                                      "Belum Konfirmasi" ? (
-                                        <span className="badge bg-danger">
-                                          {mahasiswa.status_konfirmasi}
-                                        </span>
-                                      ) : (
-                                        <span className="badge bg-success">
-                                          {mahasiswa.status_konfirmasi}
-                                        </span>
-                                      )}
-                                    </td>
-                                  </tr>
-                                ))}
-                            </tbody>
-                          </table>
+                          <div
+                            className="d-block"
+                            style={{
+                              height: "65vh",
+                              overflowY: "auto",
+                            }}
+                          >
+                            <table className="table table-striped">
+                              <thead
+                                style={{
+                                  position: "sticky",
+                                  top: "0",
+                                  zIndex: 1,
+                                }}
+                              >
+                                <tr>
+                                  <th
+                                    style={{
+                                      position: "sticky",
+                                      top: "0",
+                                      zIndex: 1,
+                                      background: "#FFF",
+                                    }}
+                                  >
+                                    No.
+                                  </th>
+                                  <th
+                                    style={{
+                                      position: "sticky",
+                                      top: "0",
+                                      zIndex: 1,
+                                      background: "#FFF",
+                                    }}
+                                  >
+                                    Nama
+                                  </th>
+                                  <th
+                                    style={{
+                                      position: "sticky",
+                                      top: "0",
+                                      zIndex: 1,
+                                      background: "#FFF",
+                                    }}
+                                  >
+                                    Status
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {data.data
+                                  .filter((val) => {
+                                    if (val.kelas === selectedClass) {
+                                      return true;
+                                    } else {
+                                      return false;
+                                    }
+                                  })
+                                  .map((mahasiswa) => (
+                                    <tr key={mahasiswa.no}>
+                                      <td>{mahasiswa.no}</td>
+                                      <td>{mahasiswa.nama}</td>
+                                      <td>
+                                        {mahasiswa.status_konfirmasi ==
+                                        "Belum Konfirmasi" ? (
+                                          <span className="badge bg-danger">
+                                            {mahasiswa.status_konfirmasi}
+                                          </span>
+                                        ) : (
+                                          <span className="badge bg-success">
+                                            {mahasiswa.status_konfirmasi}
+                                          </span>
+                                        )}
+                                      </td>
+                                    </tr>
+                                  ))}
+                              </tbody>
+                            </table>
+                          </div>
                         </small>
                       )}
                     </>
