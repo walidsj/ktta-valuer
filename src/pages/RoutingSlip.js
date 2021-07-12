@@ -14,7 +14,7 @@ function RoutingSlip() {
   useEffect(() => {
     const interval = setInterval(() => {
       Tabletop.init({
-        key: "https://docs.google.com/spreadsheets/d/1m4xZDDiXprQTQLNsrlyyTBHZ5pdpsmsnUhpheGI8KPA/pubhtml",
+        key: "https://docs.google.com/spreadsheets/d/14aZM5jl_IOYPvVyn_FNQTMJkQv4DbepqlYIrfhGnKfE/pubhtml",
         simpleSheet: true,
       })
         .then((res) => {
