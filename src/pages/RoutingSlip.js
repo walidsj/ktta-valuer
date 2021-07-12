@@ -89,7 +89,7 @@ function RoutingSlip() {
             </div>
           </div>
           <div className="col-12 col-md-4">
-            <div className="mb-3 mt-4 text-center">
+            <div className="mb-3 mt-5 text-center">
               <h4>
                 <strong>Tracking Kelas</strong>
               </h4>
