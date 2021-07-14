@@ -163,15 +163,17 @@ function RoutingSlip() {
                                 }
                               </td>
                               <td>
-                                {
-                                  data.data.filter((val) => {
-                                    if (val.kelas === "6-01") {
-                                      return true;
-                                    } else {
-                                      return false;
-                                    }
-                                  }).length
-                                }
+                                <strong>
+                                  {
+                                    data.data.filter((val) => {
+                                      if (val.kelas === "6-01") {
+                                        return true;
+                                      } else {
+                                        return false;
+                                      }
+                                    }).length
+                                  }
+                                </strong>
                               </td>
                             </tr>
                             <tr>
@@ -209,15 +211,17 @@ function RoutingSlip() {
                                 }
                               </td>
                               <td>
-                                {
-                                  data.data.filter((val) => {
-                                    if (val.kelas === "6-02") {
-                                      return true;
-                                    } else {
-                                      return false;
-                                    }
-                                  }).length
-                                }
+                                <strong>
+                                  {
+                                    data.data.filter((val) => {
+                                      if (val.kelas === "6-02") {
+                                        return true;
+                                      } else {
+                                        return false;
+                                      }
+                                    }).length
+                                  }
+                                </strong>
                               </td>
                             </tr>
                             <tr>
@@ -255,15 +259,17 @@ function RoutingSlip() {
                                 }
                               </td>
                               <td>
-                                {
-                                  data.data.filter((val) => {
-                                    if (val.kelas === "6-03") {
-                                      return true;
-                                    } else {
-                                      return false;
-                                    }
-                                  }).length
-                                }
+                                <strong>
+                                  {
+                                    data.data.filter((val) => {
+                                      if (val.kelas === "6-03") {
+                                        return true;
+                                      } else {
+                                        return false;
+                                      }
+                                    }).length
+                                  }
+                                </strong>
                               </td>
                             </tr>
                             <tr>
@@ -301,15 +307,17 @@ function RoutingSlip() {
                                 }
                               </td>
                               <td>
-                                {
-                                  data.data.filter((val) => {
-                                    if (val.kelas === "6-04") {
-                                      return true;
-                                    } else {
-                                      return false;
-                                    }
-                                  }).length
-                                }
+                                <strong>
+                                  {
+                                    data.data.filter((val) => {
+                                      if (val.kelas === "6-04") {
+                                        return true;
+                                      } else {
+                                        return false;
+                                      }
+                                    }).length
+                                  }
+                                </strong>
                               </td>
                             </tr>
                             <tr>
@@ -347,15 +355,17 @@ function RoutingSlip() {
                                 }
                               </td>
                               <td>
-                                {
-                                  data.data.filter((val) => {
-                                    if (val.kelas === "6-05") {
-                                      return true;
-                                    } else {
-                                      return false;
-                                    }
-                                  }).length
-                                }
+                                <strong>
+                                  {
+                                    data.data.filter((val) => {
+                                      if (val.kelas === "6-05") {
+                                        return true;
+                                      } else {
+                                        return false;
+                                      }
+                                    }).length
+                                  }
+                                </strong>
                               </td>
                             </tr>
                             <tr>
@@ -393,15 +403,17 @@ function RoutingSlip() {
                                 }
                               </td>
                               <td>
-                                {
-                                  data.data.filter((val) => {
-                                    if (val.kelas === "6-06") {
-                                      return true;
-                                    } else {
-                                      return false;
-                                    }
-                                  }).length
-                                }
+                                <strong>
+                                  {
+                                    data.data.filter((val) => {
+                                      if (val.kelas === "6-06") {
+                                        return true;
+                                      } else {
+                                        return false;
+                                      }
+                                    }).length
+                                  }
+                                </strong>
                               </td>
                             </tr>
                             <tr>
@@ -439,15 +451,17 @@ function RoutingSlip() {
                                 }
                               </td>
                               <td>
-                                {
-                                  data.data.filter((val) => {
-                                    if (val.kelas === "6-07") {
-                                      return true;
-                                    } else {
-                                      return false;
-                                    }
-                                  }).length
-                                }
+                                <strong>
+                                  {
+                                    data.data.filter((val) => {
+                                      if (val.kelas === "6-07") {
+                                        return true;
+                                      } else {
+                                        return false;
+                                      }
+                                    }).length
+                                  }
+                                </strong>
                               </td>
                             </tr>
                             <tr>
@@ -485,15 +499,17 @@ function RoutingSlip() {
                                 }
                               </td>
                               <td>
-                                {
-                                  data.data.filter((val) => {
-                                    if (val.kelas === "6-08") {
-                                      return true;
-                                    } else {
-                                      return false;
-                                    }
-                                  }).length
-                                }
+                                <strong>
+                                  {
+                                    data.data.filter((val) => {
+                                      if (val.kelas === "6-08") {
+                                        return true;
+                                      } else {
+                                        return false;
+                                      }
+                                    }).length
+                                  }
+                                </strong>
                               </td>
                             </tr>
                             <tr>
@@ -531,15 +547,17 @@ function RoutingSlip() {
                                 }
                               </td>
                               <td>
-                                {
-                                  data.data.filter((val) => {
-                                    if (val.kelas === "6-09") {
-                                      return true;
-                                    } else {
-                                      return false;
-                                    }
-                                  }).length
-                                }
+                                <strong>
+                                  {
+                                    data.data.filter((val) => {
+                                      if (val.kelas === "6-09") {
+                                        return true;
+                                      } else {
+                                        return false;
+                                      }
+                                    }).length
+                                  }
+                                </strong>
                               </td>
                             </tr>
                           </tbody>
