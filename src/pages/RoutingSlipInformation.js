@@ -198,7 +198,7 @@ function RoutingSlipInformation() {
                       >
                         <a
                           className="btn btn-primary btn-sm"
-                          href="http://gg.gg/persetujuandosnil"
+                          href="https://docs.google.com/forms/d/e/1FAIpQLSdhQRBOc_SDY8TntJ165ArLSmakCDy_XMCI3F-ItZC9Bkoi_w/viewform"
                           rel="noreferrer"
                           target="_blank"
                         >
