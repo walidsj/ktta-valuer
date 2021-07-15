@@ -42,7 +42,9 @@ function Final() {
                 style={{ width: "100px", maxWidth: "25vw" }}
                 alt=""
               />
-              <h2 className="mb-0 fw-bold">Live Count</h2>
+              <h2 className="fw-bold">
+                <div className="badge bg-warning">Live Count</div>
+              </h2>
               <h4>Pengumpulan Akhir KTTA 😇</h4>
               <TimerCountdownFinal />
               <small>Batas: 19-23 Juli 2021 (17.00 WIB)</small>
