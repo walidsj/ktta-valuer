@@ -32,7 +32,9 @@ function RoutingSlipInformation() {
   function handlePernyataanLulus() {
     let input = document.createElement("input");
     document.body.appendChild(input);
-    input.value = `Lulus_${mahasiswaData.prodi}_${mahasiswaData.kelas}_${mahasiswaData.no}_${mahasiswaData.nama}_${mahasiswaData.npm}`;
+    input.value = `Lulus_${mahasiswaData.prodi}_${mahasiswaData.kelas}_${
+      mahasiswaData.no < 10 ? "0" + mahasiswaData.no : mahasiswaData.no
+    }_${mahasiswaData.nama}_${mahasiswaData.npm}`;
     input.select();
     document.execCommand("copy");
     document.body.removeChild(input);
@@ -42,7 +44,9 @@ function RoutingSlipInformation() {
   function handleRoutingSlip() {
     let input = document.createElement("input");
     document.body.appendChild(input);
-    input.value = `RS_${mahasiswaData.prodi}_${mahasiswaData.kelas}_${mahasiswaData.no}_${mahasiswaData.nama}_${mahasiswaData.npm}`;
+    input.value = `RS_${mahasiswaData.prodi}_${mahasiswaData.kelas}_${
+      mahasiswaData.no < 10 ? "0" + mahasiswaData.no : mahasiswaData.no
+    }_${mahasiswaData.nama}_${mahasiswaData.npm}`;
     input.select();
     document.execCommand("copy");
     document.body.removeChild(input);
