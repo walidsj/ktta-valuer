@@ -407,7 +407,7 @@ function FinalInformation() {
               className="btn btn-warning"
             >
               <i className="fa fa-check-circle me-2" />
-              Konfirmasi Pengumpulan RS & PL
+              Konfirmasi Pengumpulan Akhir KTTA
             </a>
           </div>
           <div className="pt-3 text-center">
