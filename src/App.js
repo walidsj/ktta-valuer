@@ -7,6 +7,8 @@ import { Suspense } from "react";
 import Valuation from "./pages/Valuation";
 import RoutingSlip from "./pages/RoutingSlip";
 import RoutingSlipInformation from "./pages/RoutingSlipInformation";
+import Final from "./pages/Final";
+import FinalInformation from "./pages/FinalInformation";
 
 function App() {
   return (
@@ -36,6 +38,11 @@ function App() {
               exact
               path="/informasi"
               render={() => <RoutingSlipInformation />}
+            />
+            <Route exact path="/pengumpulan-rslpl" render={() => <Final />} />
+            <Route
+              path="/pengumpulan-rslpl/informasi"
+              render={() => <FinalInformation />}
             />
             <Route
               exact
