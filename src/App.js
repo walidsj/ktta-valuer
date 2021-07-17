@@ -3,7 +3,7 @@ import ValuationInformation from "./pages/ValuationInformation";
 import "./App.css";
 import { RecoilRoot } from "recoil";
 import logo from "./assets/logo.png";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import Valuation from "./pages/Valuation";
 import RoutingSlip from "./pages/RoutingSlip";
 import RoutingSlipInformation from "./pages/RoutingSlipInformation";
@@ -33,16 +33,20 @@ function App() {
       >
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" render={() => <RoutingSlip />} />
+            <Route exact path="/" render={() => <Final />} />
             <Route
               exact
               path="/informasi"
-              render={() => <RoutingSlipInformation />}
+              render={() => <FinalInformation />}
             />
-            <Route exact path="/pengumpulan-rslpl" render={() => <Final />} />
+            <Route
+              exact
+              path="/pengumpulan-rslpl"
+              render={() => <RoutingSlip />}
+            />
             <Route
               path="/pengumpulan-rslpl/informasi"
-              render={() => <FinalInformation />}
+              render={() => <RoutingSlipInformation />}
             />
             <Route
               exact

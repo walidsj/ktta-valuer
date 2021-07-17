@@ -6,6 +6,7 @@ import "../App.css";
 import logo from "../assets/logo.png";
 import { mahasiswaFinalState } from "../stores/mahasiswaFinal";
 import TimerCountdownFinal from "../components/TimerCountdownFinal";
+import swal from "sweetalert";
 
 function Final() {
   const [data, setData] = useRecoilState(mahasiswaFinalState);
@@ -29,6 +30,14 @@ function Final() {
   const percentage = ((data.sudah / data.total) * 100).toFixed(2);
 
   const [selectedClass, setSelectedClass] = useState("all");
+
+  useEffect(() => {
+    return swal(
+      "Perhatian",
+      "Teman-teman diharapkan dapat menunggu dan tidak mengumpulkan KTTA sebelum pendistribusian lembar persetujuan yang telah ditandatangani oleh kaprodi. Terima kasih.",
+      "info"
+    );
+  }, []);
 
   return (
     <div className="background-sircuit d-flex flex-column min-vh-100 justify-content-center align-items-center">
@@ -63,10 +72,7 @@ function Final() {
               <h4>{percentage}%</h4>
             </div>
             <div className="pt-2 pb-2 pb-md-1 mb-5 mb-md-1">
-              <Link
-                to="/pengumpulan-rslpl/informasi"
-                className="btn btn-warning m-1"
-              >
+              <Link to="/informasi" className="btn btn-warning m-1">
                 <i className="fa fa-paste me-2 m-2" />
                 Pengumpulan Akhir
               </Link>

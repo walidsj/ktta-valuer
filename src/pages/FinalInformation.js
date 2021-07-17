@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 import swal from "sweetalert";
@@ -88,12 +88,20 @@ function FinalInformation() {
 
     let input = document.createElement("input");
     document.body.appendChild(input);
-    input.value = `${mahasiswaData.nama}_${mahasiswaData.npm}_${mahasiswaData.kelas}_DIII PBBPenilai_2021_${lokasi}`;
+    input.value = `${mahasiswaData.nama}_${mahasiswaData.npm}_${mahasiswaData.kelas}_DIII PBB Penilai_2021_${lokasi}`;
     input.select();
     document.execCommand("copy");
     document.body.removeChild(input);
     swal("Sudah disalin.", input.value, "success");
   }
+
+  useEffect(() => {
+    return swal(
+      "Perhatian",
+      "Teman-teman diharapkan dapat menunggu dan tidak mengumpulkan KTTA sebelum pendistribusian lembar persetujuan yang telah ditandatangani oleh kaprodi. Terima kasih.",
+      "info"
+    );
+  }, []);
 
   return (
     <div className="background-sircuit min-vh-100">
@@ -144,11 +152,11 @@ function FinalInformation() {
                 <strong>
                   <a
                     className="text-light"
-                    href="https://www.instagram.com/p/CRNrewlhXn-/"
+                    href="https://www.instagram.com/p/CRbCZAghaT1/"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Klik Di sini
+                    FAQ Klik Di sini
                   </a>
                 </strong>
                 <button
