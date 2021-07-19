@@ -23,7 +23,7 @@ function Final() {
           setIndicatorShow((indicatorShow) => !indicatorShow);
         })
         .catch((err) => console.warn(err));
-    }, 10000);
+    }, 8000);
     return () => clearInterval(interval);
   }, [setData, data]);
 
@@ -637,7 +637,7 @@ function Final() {
                                       <td>{mahasiswa.no}</td>
                                       <td>{mahasiswa.nama}</td>
                                       <td>
-                                        {mahasiswa.status_konfirmasi ==
+                                        {mahasiswa.status_konfirmasi ===
                                         "Belum Konfirmasi" ? (
                                           <span className="badge bg-danger">
                                             {mahasiswa.status_konfirmasi}
@@ -670,7 +670,7 @@ function Final() {
               } fa fa-circle text-primary me-1`}
               style={{ fontSize: "9px" }}
             />
-            realtime (update/10s)
+            realtime (update/5s)
           </small>
           <br />
           <small className="text-muted">

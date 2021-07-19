@@ -629,7 +629,7 @@ function RoutingSlip() {
                                       <td>{mahasiswa.no}</td>
                                       <td>{mahasiswa.nama}</td>
                                       <td>
-                                        {mahasiswa.status_konfirmasi ==
+                                        {mahasiswa.status_konfirmasi ===
                                         "Belum Konfirmasi" ? (
                                           <span className="badge bg-danger">
                                             {mahasiswa.status_konfirmasi}

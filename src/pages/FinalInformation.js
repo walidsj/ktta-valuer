@@ -1,13 +1,45 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import swal from "sweetalert";
+import Tabletop from "tabletop";
 import logo from "../assets/logo.png";
 import { mahasiswaFinalState } from "../stores/mahasiswaFinal";
 
 function FinalInformation() {
   const mahasiswaRealtime = useRecoilValue(mahasiswaFinalState);
   const [mahasiswaData, setMahasiswaData] = useState();
+
+  /**
+   * untuk realtime data
+   */
+  const [data, setData] = useRecoilState(mahasiswaFinalState);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      Tabletop.init({
+        key: "https://docs.google.com/spreadsheets/d/1W9e2lxhj11u81KRIGBDuUJo7fReMHTAlXbnDyXEg9eA/pubhtml",
+        simpleSheet: true,
+      })
+        .then((res) => {
+          setData(res);
+          let npmInput = inputs.npm;
+          const { data } = mahasiswaRealtime;
+          if (npmInput) {
+            const mahasiswa = data.filter(
+              (mahasiswaData) => mahasiswaData.npm === npmInput
+            );
+
+            if (mahasiswa[0]) {
+              setMahasiswaData(mahasiswa[0]);
+            } else {
+              setMahasiswaData(null);
+            }
+          }
+        })
+        .catch((err) => console.warn(err));
+    }, 8000);
+    return () => clearInterval(interval);
+  }, [setData, data]);
 
   const [inputs, setInputs] = useState({});
   const [alertShow, setAlertShow] = useState(true);
@@ -144,26 +176,60 @@ function FinalInformation() {
             </div>
             {alertShow && (
               <div
-                className="alert alert-primary alert-dismissible fade show text-left"
+                className={`alert ${
+                  mahasiswaData &&
+                  mahasiswaData.status_konfirmasi === "Sudah Konfirmasi"
+                    ? "alert-success"
+                    : "alert-primary"
+                } alert-dismissible fade show text-left`}
                 role="alert"
               >
-                <i className="fa fa-exclamation-triangle me-2" />
-                Ada Pertanyaan?{" "}
-                <strong>
-                  <a
-                    className="text-light"
-                    href="https://www.instagram.com/p/CRbCZAghaT1/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    FAQ Klik Di sini
-                  </a>
-                </strong>
-                <button
-                  onClick={() => setAlertShow(!alertShow)}
-                  type="button"
-                  class="btn-close"
-                ></button>
+                {mahasiswaData &&
+                mahasiswaData.status_konfirmasi === "Sudah Konfirmasi" ? (
+                  <>
+                    <i className="fa fa-check-circle me-2" />
+                    Selamat, kamu sudah menyelesaikan semua tahapan KTTA!!
+                    <br />
+                    <a
+                      className="btn btn-warning btn-sm m-1"
+                      href={mahasiswaData.sertif_pdf}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      <i className="fa fa-download me-2" />
+                      Sertif PDF
+                    </a>
+                    <a
+                      className="btn btn-warning btn-sm m-1"
+                      href={mahasiswaData.sertif_story}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      <i className="fa fa-download me-2" />
+                      Sertif Story
+                    </a>
+                  </>
+                ) : (
+                  <>
+                    <i className="fa fa-exclamation-triangle me-2" />
+                    Ada Pertanyaan?{" "}
+                    <strong>
+                      <a
+                        className="text-light"
+                        href="https://www.instagram.com/p/CRbCZAghaT1/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        FAQ Klik Di sini
+                      </a>
+                    </strong>
+                    <button
+                      onClick={() => setAlertShow(!alertShow)}
+                      type="button"
+                      className="btn-close"
+                    ></button>
+                  </>
+                )}
               </div>
             )}
           </div>
