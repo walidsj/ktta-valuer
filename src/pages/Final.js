@@ -31,13 +31,16 @@ function Final() {
 
   const [selectedClass, setSelectedClass] = useState("all");
 
-  useEffect(() => {
-    return swal(
-      "Perhatian",
-      "Teman-teman diharapkan dapat menunggu dan tidak mengumpulkan KTTA sebelum pendistribusian lembar persetujuan yang telah ditandatangani oleh kaprodi. Terima kasih.",
-      "info"
-    );
-  }, []);
+  /**
+   * menampilkan peringatan untuk menunda pengumpulan karena lembar persetujuan kaprodi belum turun.
+   */
+  // useEffect(() => {
+  //   return swal(
+  //     "Perhatian",
+  //     "Teman-teman diharapkan dapat menunggu dan tidak mengumpulkan KTTA sebelum pendistribusian lembar persetujuan yang telah ditandatangani oleh kaprodi. Terima kasih.",
+  //     "info"
+  //   );
+  // }, []);
 
   return (
     <div className="background-sircuit d-flex flex-column min-vh-100 justify-content-center align-items-center">

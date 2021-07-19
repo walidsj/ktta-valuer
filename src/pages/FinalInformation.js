@@ -127,13 +127,16 @@ function FinalInformation() {
     swal("Sudah disalin.", input.value, "success");
   }
 
-  useEffect(() => {
-    return swal(
-      "Perhatian",
-      "Teman-teman diharapkan dapat menunggu dan tidak mengumpulkan KTTA sebelum pendistribusian lembar persetujuan yang telah ditandatangani oleh kaprodi. Terima kasih.",
-      "info"
-    );
-  }, []);
+  /**
+   * menampilkan peringatan untuk menunda pengumpulan karena lembar persetujuan kaprodi belum turun.
+   */
+  // useEffect(() => {
+  //   return swal(
+  //     "Perhatian",
+  //     "Teman-teman diharapkan dapat menunggu dan tidak mengumpulkan KTTA sebelum pendistribusian lembar persetujuan yang telah ditandatangani oleh kaprodi. Terima kasih.",
+  //     "info"
+  //   );
+  // }, []);
 
   return (
     <div className="background-sircuit min-vh-100">
@@ -188,7 +191,7 @@ function FinalInformation() {
                 mahasiswaData.status_konfirmasi === "Sudah Konfirmasi" ? (
                   <>
                     <i className="fa fa-check-circle me-2" />
-                    Selamat, kamu sudah menyelesaikan semua tahapan KTTA!!
+                    Selamat, kamu sudah menyelesaikan seluruh tahapan KTTA 🙌
                     <br />
                     <a
                       className="btn btn-warning btn-sm m-1"
@@ -319,12 +322,12 @@ function FinalInformation() {
                       <th>Pernyataan Keaslian</th>
                       <td>
                         <ul>
-                          <li>pernyataan keaslian;</li>
                           <li>lembar persetujuan;</li>
                           <li>
                             pernyataan lulus dari tim penilai yang telah
-                            ditandatangani.
+                            ditandatangani;
                           </li>
+                          <li>pernyataan keaslian.</li>
                         </ul>
                       </td>
                       <td>1 berkas PDF</td>
@@ -393,11 +396,11 @@ function FinalInformation() {
                       <th>Isi KTTA</th>
                       <td>
                         <ul>
-                          <li>
-                            seluruh isi KTTA (Bab I, Bab II, Bab III, Bab IV);
-                          </li>
+                          <li>seluruh isi KTTA (Bab I - IV);</li>
                           <li>daftar pustaka;</li>
-                          <li>lampiran.</li>
+                          <li>lampiran;</li>
+                          <li>surat riset;</li>
+                          <li>daftar riwayat hidup.</li>
                         </ul>
                       </td>
                       <td>1 berkas PDF</td>
