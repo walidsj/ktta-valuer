@@ -240,7 +240,7 @@ function RoutingSlipInformation() {
               href="https://docs.google.com/forms/d/e/1FAIpQLSdH_eOyHR3r5XIAxP2Ubh50YOOgSmN0x64bMalmUxvFCdkyBg/viewform"
               target="_blank"
               rel="noreferrer"
-              className="btn btn-warning"
+              className="btn btn-warning disabled"
             >
               <i className="fa fa-check-circle me-2" />
               Konfirmasi Pengumpulan RS & PL

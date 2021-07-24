@@ -481,7 +481,7 @@ function FinalInformation() {
               href="https://docs.google.com/forms/d/e/1FAIpQLScE_VuprHYepRmYhv1UiTGEUEK0IwVCaNL1ZJYSomjxtPQtiw/viewform"
               target="_blank"
               rel="noreferrer"
-              className="btn btn-warning"
+              className="btn btn-warning disabled"
             >
               <i className="fa fa-check-circle me-2" />
               Konfirmasi Pengumpulan Akhir KTTA
